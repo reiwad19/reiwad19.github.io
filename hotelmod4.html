@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <style>
+    body {
+      background-image: url("https://33.media.tumblr.com/378e6b25e3ac7c826ef27a2aa8d09c65/tumblr_nkhn0hm0lM1tah9pwo3_1280.gif");
+      height: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .topbar {
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 500px;
+      width: 25%;
+      text-align: center;
+      background-color: black;
+      border-radius: 25px;
+    }
+      #roomOne {
+      position: absolute;
+      top: 100px;
+      left: 50px;
+      width: 300px;
+      height: 350px;
+      background-color: #ff69b4;
+      float: left;
+      opacity: 0.8;
+      border-radius: 25px;
+    }
+      #roomTwo {
+      position: absolute;
+      top: 100px;
+      left: 375px;
+      width: 300px;
+      height: 350px;
+      background-color: #ff69b4;
+      float: left;
+      opacity: 0.8;
+      border-radius: 25px;
+    }
+      #roomThree {
+        position: absolute;
+        top: 100px;
+        left: 700px;
+        width: 300px;
+        height: 350px;
+        background-color: #ff69b4;
+        float: left;
+        opacity: 0.8;
+        border-radius: 25px;
+      }
+      #roomFour {
+        position: absolute;
+        top: 100px;
+        left: 1025px;
+        width: 300px;
+        height: 350px;
+        background-color: #ff69b4;
+        float: left;
+        opacity: 0.8;
+        border-radius: 25px;
+    }
+     .roomNumber{
+       color: black;
+       font-size: 30px;
+       font-weight: bold;
+       margin: 20px 15px;
+     }
+     h1 {
+       color: white;
+       font-size: 40px;
+     }
+     #roomFull {
+       display: none;
+     }
+     #roomFull2 {
+       display: none;
+     }
+     #roomFull3 {
+       display: none;
+     }
+     #roomFull4 {
+       display: none;
+     }
+     .button {
+       background-color: white;
+       color: black;
+       text-align: center;
+     }
+
+    </style>
+    <script>
+      g = 0;
+      h = 0;
+      p = 0;
+      j = 0;
+      k = 0;
+     function abc(event) {
+       if(window.event.keyCode == 13) {
+         addRmOne();
+       }
+     }
+     document.getElementById('roomFull').style.display = "none";
+     function addRmOne() {
+         if (g < 4 ) {
+          var newGuest = document.createElement('li');
+          var newText = document.createTextNode(a.value);
+          newGuest.appendChild(newText);
+          var position = document.querySelectorAll('ol.guestListOne')[0];
+          position.appendChild(newGuest);
+          g++;
+          }
+          else {
+            document.getElementById('roomFull').style.display = "block";
+          }
+      }
+      function removeRmOne() {
+          var b = document.getElementById('optionList').value;
+          var surfer1 = document.getElementById('one');
+          var removeGuest = surfer1.getElementsByTagName('li')[b];
+          var position1 = removeGuest.parentNode;
+          position1.removeChild(removeGuest);
+          g--;
+          document.getElementById('roomFull').style.display = "none";
+      }
+     function def(event) {
+       if(window.event.keyCode == 13) {
+         addRmTwo();
+       }
+     }
+     document.getElementById('roomFull2').style.display = "none";
+     function addRmTwo() {
+        if (h < 4) {
+          var newGuestA = document.createElement('li');
+          var newTextA = document.createTextNode(c.value);
+          newGuestA.appendChild(newTextA);
+          var positionA = document.querySelectorAll('ol.guestListTwo')[0];
+          positionA.appendChild(newGuestA);
+          h++;
+        }
+        else {
+          document.getElementById('roomFull2').style.display = "block";
+        }
+    }
+      function removeRmTwo() {
+          var d = document.getElementById('optionListTwo').value;
+          var surfer = document.getElementById('supbrah');
+          var removeGuestA = surfer.getElementsByTagName('li')[d];
+          var positionA = removeGuestA.parentNode;
+          positionA.removeChild(removeGuestA);
+          h--;
+          document.getElementById('roomFull2').style.display = "none";
+      }
+      function ghi(event) {
+        if(window.event.keyCode == 13) {
+          addRmThree();
+        }
+      }
+      document.getElementById('roomFull3').style.display = "none";
+      function addRmThree() {
+        if (p < 4) {
+          var newGuestB = document.createElement('li');
+          var newTextB = document.createTextNode(hi.value);
+          newGuestB.appendChild(newTextB);
+          var positionB = document.querySelectorAll('ol.guestListThree')[0];
+          positionB.appendChild(newGuestB);
+          p++;
+        }
+        else {
+          document.getElementById('roomFull3').style.display = "block";
+        }
+    }
+      function removeRmThree() {
+          var e = document.getElementById('optionListThree').value;
+          var surfera = document.getElementById('supboi');
+          var removeGuestB = surfera.getElementsByTagName('li')[e];
+          var positionB = removeGuestB.parentNode;
+          positionB.removeChild(removeGuestB);
+          p--;
+          document.getElementById('roomFull3').style.display = "none";
+      }
+      function jkl(event) {
+        if(window.event.keyCode == 13) {
+          addRmFour();
+        }
+      }
+      document.getElementById('roomFull4').style.display = "none";
+      function addRmFour() {
+        if (j < 4 ) {
+          var newGuestC = document.createElement('li');
+          var newTextC = document.createTextNode(w.value);
+          newGuestC.appendChild(newTextC);
+          var positionC = document.querySelectorAll('ol.guestListFour')[0];
+          positionC.appendChild(newGuestC);
+          j++;
+          }
+          else {
+            document.getElementById('roomFull4').style.display = "block";
+          }
+      }
+      function removeRmFour() {
+        var q = document.getElementById('optionListFour').value;
+        var surferbro = document.getElementById('supboiz');
+        var removeGuestC = surferbro.getElementsByTagName('li')[q];
+        var positionC = removeGuestC.parentNode;
+        positionC.removeChild(removeGuestC);
+        j--;
+        document.getElementById('roomFull4').style.display = "none";
+    }
+    </script>
+  </head>
+    <body>
+    <div class="topbar">
+      <h1>Reimon's Hotel</h1>
+    </div>
+
+    <div id="roomOne">
+      <p class="roomNumber">Room One</p>
+      <p id="roomFull">Sorry! The room is full. Please check into another room.</p>
+      <input type="text" id="a" onkeypress="abc(event)">
+      <button onclick="addRmOne()" class="button">Add Guest</button>
+      <br>
+      <br>
+      <select id="optionList" class="button">
+        <option value="0">Guest 1</option>
+        <option value="1">Guest 2</option>
+        <option value="2">Guest 3</option>
+        <option value="3">Guest 4</option>
+      </select>
+      <button onclick="removeRmOne()" class="button">Check out</button>
+      <ol class="guestListOne" id="one"></ol>
+    </div>
+    <div id="roomTwo">
+      <p class="roomNumber">Room Two</p>
+      <p id="roomFull2">Sorry! The room is full. Please check into another room.</p>
+      <input type="text" id="c" onkeypress="def(event)">
+      <button onclick="addRmTwo()" class="button">Add Guest</button>
+      <br>
+      <br>
+      <select id="optionListTwo" class="button">
+        <option value="0">Guest 1</option>
+        <option value="1">Guest 2</option>
+        <option value="2">Guest 3</option>
+        <option value="3">Guest 4</option>
+      </select>
+      <button onclick="removeRmTwo()" class="button">Check out</button>
+      <ol class="guestListTwo" id="supbrah"></ol>
+    </div>
+    <div id="roomThree">
+      <p class="roomNumber">Room Three</p>
+      <p id="roomFull3">Sorry! The room is full. Please check into another room.</p>
+      <input type="text" id="hi" onkeypress="ghi(event)">
+      <button onclick="addRmThree()" class="button">Add Guest</button>
+      <br>
+      <br>
+      <select id="optionListThree" class="button">
+        <option value="0">Guest 1</option>
+        <option value="1">Guest 2</option>
+        <option value="2">Guest 3</option>
+        <option value="3">Guest 4</option>
+      </select>
+      <button onclick="removeRmThree()" class="button">Check out</button>
+      <ol class="guestListThree" id="supboi"></ol>
+    </div>
+    <div id="roomFour">
+      <p class="roomNumber">Room Four</p>
+      <p id="roomFull4">Sorry! The room is full. Please check into another room.</p>
+      <input type="text" id="w" onkeypress="jkl(event)">
+      <button onclick="addRmFour()" class="button">Add Guest</button>
+      <br>
+      <br>
+      <select id="optionListFour" class="button">
+        <option value="0">Guest 1</option>
+        <option value="1">Guest 2</option>
+        <option value="2">Guest 3</option>
+        <option value="3">Guest 4</option>
+      </select>
+      <button onclick="removeRmFour()" class="button">Check out</button>
+      <ol class="guestListFour" id="supboiz"></ol>
+    </div>
+  </body>
+</html>
