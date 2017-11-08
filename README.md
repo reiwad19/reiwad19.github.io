@@ -1,1 +1,0 @@
-# reiwad19.github.io
