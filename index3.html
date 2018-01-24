@@ -20,7 +20,7 @@ function preload() {
 
     game.load.image('sky', 'assets/pq1.png');
     game.load.image('ground', 'assets/platform.png');
-    game.load.image('star', 'assets/star.png');
+    game.load.image('star', 'assets/mexican.jpg', 400, 800);
     game.load.spritesheet('dude', 'assets/trump_run.png', 100, 100);
     game.load.audio('background_music', 'assets/bigshaq.mp3');
 backgroundMusic = game.add.audio('background_music');
@@ -91,7 +91,7 @@ function create() {
     stars.enableBody = true;
 
     //  Here we'll create 12 of them evenly spaced apart
-    for (var i = 0; i < 100; i++)
+    for (var i = 0; i < 12; i++)
     {
         //  Create a star inside of the 'stars' group
         var star = stars.create(i * 70, 0, 'star');
