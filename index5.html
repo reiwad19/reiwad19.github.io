@@ -158,22 +158,14 @@ function collectStar (player, star) {
     
     // Removes the star from the screen
     player.kill();
-    stateText.text=" GAME OVER \n click to restart";
-    stateText.visible = true;
-    
-    game.input.onTap.addOnce(restart, this);
+    location.href="index5.html"
 
     //  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
 
 }
-function restart () {
-  lives.callAll('revive');
-  
-  play.revive();
-  stateText.visible = false;
-}
+
 </script>
 
 </body>
