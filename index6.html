@@ -101,7 +101,7 @@ function create() {
     for (var i = 0; i < 3; i++)
     {
         var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
-        //ship.anchor.setTo(0.5, 0.5);
+        ship.anchor.setTo(0.5, 0.5);
         ship.angle = 90;
         ship.alpha = 0.4;
     }
@@ -173,6 +173,15 @@ function update() {
         {
             player.body.velocity.x = 200;
         }
+        else if (cursors.UP.isDown)
+        {
+            player.body.velocity.y = 200;
+        }
+        else if (cursors.DOWN.isDown)
+        {
+          player.body.velocity.y = -200;
+        }
+      
 
         //  Firing?
         if (fireButton.isDown)
